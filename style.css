@@ -1,0 +1,76 @@
+body{
+    margin: 0; padding: 0;
+} 
+
+.collapsible 
+{
+background-color: #777;
+color: white;
+cursor: pointer;
+padding: 5px;
+width: 100%;
+border: none;
+text-align: left;
+outline: none;
+font-size: 15px;
+
+}
+
+form
+{
+    position:absolute;
+    top: 20px;
+    left: 20px;
+}
+fieldset{
+    width:20%; float: left;
+}
+.active, .collapsible:hover 
+{
+background-color: #555;
+}
+
+.hideable 
+{
+padding: 0 5px;
+display: none;
+overflow: auto;
+background-color: white;
+height: 75  0px;
+}
+
+input[type=text]
+{ width:100%}
+input[type=range]
+{ width:20%}
+
+#links
+{
+    text-align: right;
+}
+
+#linksPanel
+{
+    position: absolute ;
+    top: 0px; right: 9px;
+    width: 46%;
+    z-index: 100;
+}
+
+#contentPanel
+{
+    position: absolute ;
+    top: 0px; left: 9px;
+    width: 50%;
+    z-index: 100;
+}
+
+#pagelinks
+{
+    word-break: break-all;
+}
+
+canvas
+{     
+    background-color: black;
+}

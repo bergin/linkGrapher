@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <title>Graph(ical) Browser</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script type="application/x-javascript" src="main.js">  </script>
+    <script type="application/x-javascript" src="classes.js">  </script>
+    <script type="application/x-javascript" src="trig_vector.js">  </script>
+    <script type="application/x-javascript" src="interface.js">  </script>
+    <script type="application/x-javascript" src="nodes.js">  </script>
+    <script type="application/x-javascript" src="io.js">  </script>
+    <script type="application/x-javascript" src="dom.js">  </script>
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body onload="init()">
+
+    <div id="linksPanel">
+        <button type="button" class="collapsible" id="links"></button>
+        <div id="pagelinks" class="hideable"></div>
+
+    </div>
+    <div id="contentPanel">
+        <button type="button" class="collapsible" id="title"></button>
+        <div id="content" class="hideable"></div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+    <form onsubmit="return getAddressContentFromForm(event)">
+        <input type="text" id="address" value="https://stackoverflow.com/"/>
+        <input type="submit" value="Fetch!" />
+    </form>
+
+    <fieldset>
+		<legend>Replusion</legend>
+		<input  min="1" value="500" max="2000" step="25" type="range"  oninput="replusion.alter(this)"></input>
+	</fieldset>
+	
+	<fieldset>
+		<legend>Attraction</legend>
+		<input  min="0.001"  value=".1" max=".3" step=".05" type="range" oninput="attraction.alter(this)"></input>
+	</fieldset>
+	
+
+	<fieldset>
+		<legend>Spring Length</legend>
+		<input  min="0" value="75" max="200" step="5" type="range"   oninput="spring.alter(this)"></input> 
+	</fieldset>
+
+ 
+ 
+</body>
+</html>
